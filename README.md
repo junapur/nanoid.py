@@ -1,2 +1,2 @@
 # nanoid.py
-A tiny, secure, URL-friendly, unique string ID generator for Python.
+A Python port of [nanoid](github.com/ai/nanoid) - a tiny, secure, URL-friendly, unique string ID generator.
