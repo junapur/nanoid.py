@@ -1,0 +1,20 @@
+[project]
+name = "nanoid"
+version = "0.1.0"
+description = "A tiny, secure, URL-friendly, unique string ID generator for Python."
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "June", email = "junapur@proton.me" }]
+maintainers = [{ name = "June", email = "junapur@proton.me" }]
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.urls]
+Homepage = "https://github.com/junapur/nanoid.py"
+Repository = "https://github.com/junapur/nanoid.py"
+Issues = "https://github.com/junapur/nanoid.py/issues"
+Changelog = "https://github.com/junapur/nanoid.py/blob/main/CHANGELOG.md"
