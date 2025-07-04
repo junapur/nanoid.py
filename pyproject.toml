@@ -20,7 +20,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [dependency-groups]
-dev = ["pyright>=1.1.402", "ruff>=0.12.2"]
+dev = ["nox>=2025.5.1", "pyright>=1.1.402", "ruff>=0.12.2"]
 
 [tool.pyright]
 typeCheckingMode = "strict"
@@ -50,5 +50,8 @@ select = [
 
 ignore = [
     # The following rules conflict with Ruff's formatter:
-    "E111", "E114", "E117", "E501"
+    "E111",
+    "E114",
+    "E117",
+    "E501",
 ]
