@@ -9,12 +9,46 @@ authors = [{ name = "June", email = "junapur@proton.me" }]
 maintainers = [{ name = "June", email = "junapur@proton.me" }]
 dependencies = []
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
 [project.urls]
 Homepage = "https://github.com/junapur/nanoid.py"
 Repository = "https://github.com/junapur/nanoid.py"
 Issues = "https://github.com/junapur/nanoid.py/issues"
 Changelog = "https://github.com/junapur/nanoid.py/blob/main/CHANGELOG.md"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["pyright>=1.1.402", "ruff>=0.12.2"]
+
+[tool.pyright]
+typeCheckingMode = "strict"
+
+[tool.ruff.lint]
+select = [
+    "S",   # flake8-bandit
+    "BLE", # flake8-blind-except
+    "FBT", # flake8-boolean-trap
+    "B",   # flake8-bugbear
+    "A",   # flake8-builtins
+    "C",   # flake8-comprehensions
+    "EM",  # flake8-errmsg
+    "FA",  # flake8-future-annotations
+    "ISC", # flake8-implicit-str-concat
+    "PT",  # flake8-pytest-style
+    "RSE", # flake8-raise
+    "RET", # flake8-return
+    "SIM", # flake8-simplify
+    "TC",  # flake8-type-checking
+
+    "I", # isort
+    "N", # pep8-naming
+    "E", # pycodestyle
+    "F", # pyflakes
+]
+
+ignore = [
+    # The following rules conflict with Ruff's formatter:
+    "E111", "E114", "E117", "E501"
+]
